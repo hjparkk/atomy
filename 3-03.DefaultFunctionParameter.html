@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function say(message){
+            console.log(message);
+        }
+
+        function say(message="파라미터가 넘어오지 않았어요"){ //파라미터가 넘어오지 않았을 때, 디폴트 값.
+            console.log(message);
+        }
+
+        function plus(x, y=1){ //내가 원하는 파라미터에만 디폴트 값 생성 가능.
+            console.log(x+y);
+        }
+
+        plus(4); //5
+        plus(4,2); //6
+
+        say("안녕하세요"); //안녕하세요
+        say(); //undefined
+
+
+
+        //ES6 - EcmaScript 6버전
+
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //더하기
+        // var x = 5;
+        // var y = 2;
+        // var y2 = 3;
+        // var z = x + y + y2;
+        // console.log(z);
+
+        //빼기
+        var x = 5;
+        var y = 2;
+        var z = x - y;
+        console.log(z);
+
+        //곱하기
+        var x = 5;
+        var y = 2;
+        var z = x * y;
+        console.log(z);
+
+        //나누기
+        var x = 5;
+        var y = 2;
+        var z = x / y;
+        console.log(z);
+
+        //거듭제곱
+        var x = 5;
+        var y = 2;
+        var z = x ** y;
+        console.log(z);
+
+        //나머지
+        var x = 5;
+        var y = 2;
+        var z = x % y;
+        console.log(z);
+
+        //1씩 증가
+        var x = 1;
+        x++;
+        x++;        
+        console.log(x);
+
+        //1씩 감소 오퍼레이터
+        var x = 4;
+        x--;
+        x--;
+        console.log(x);
+
+        //값을 할당하기 위한 연산자
+        var x = 5;
+        var y = 2;
+
+        x += y; // x = x + y;
+        console.log(x);
+
+        x -= y; // x = x - y;
+        console.log(x);
+
+        x *= y; // x = x * y;
+        x /= y; // x = x / y
+        x %= y; // x = x % y
+        x **= y; // x = x ** y
+
+        //문자열 연산자
+        var txt1 = "John";
+        var txt2 = "Doe";
+        var txt3 = txt1 + " " + txt2;
+        console.log(txt3);
+
+        txt1 += txt2; //txt1 = txt1 + txt2;
+        console.log(txt1);
+
+        //숫자와 문자
+        var x = 5 + 5;
+        console.log(x);
+
+        var y = "5" + 5; //문자열 개념
+        console.log(y);
+
+        var z = "Hello" + 5;
+        console.log(z);
+
+        //비교 연산자 - 참,거짓
+        console.log(1 == 1); //equal to
+        console.log(1 == "1"); //숫자 == 문자 > 비교 연산자는 안에 값만 비교해서 true 로 나옴.
+        console.log(1 === "1"); // === 3개이면, 값과 데이터 타입까지 비교함.
+
+        console.log(1 != 3); // 다르냐, true
+        console.log(1 != "1"); //값만 비교하니, 다르지 않다. false
+        console.log(1 !== "1"); //타입 비교학기 때문에, 타입이 다르니, true
+
+        console.log(3 > 2);
+        console.log(3 < 2);
+        console.log(3 >= 2);
+        console.log(3 <= 2);
+
+        //Logical 연산자
+        console.log(3>2 && 1>2); //&& 그리고, 둘 다 만족해야 함.
+        console.log(3>2 || 1>2); // ||, 둘 중에 하나만 만족해도 됨.
+        console.log(!(3>2)); //값의 반대, 참의 반대 false
+        console.log(!(3<2)); //값의 반대, 거짓의 반대 true
+
+
+
+    </script>
+</body>
+</html>

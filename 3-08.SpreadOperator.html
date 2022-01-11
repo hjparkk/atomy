@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //스프레드 오퍼래이터
+    //분해하는 기능. 배열을 분해, 문자열도 분해.
+
+    var arr1 = [4,5,6]; //배열 선언
+    var arr2 = [1,2,3];
+    var arr3 = arr1.concat(arr2); //컨켓으로 합침
+    console.log(arr3); //[4, 5, 6, 1, 2, 3]
+
+
+    var arr1 = [4,5,6]; //배열 선언
+    var arr2 = [1,2,3,...arr1]; //레스트 파라미터 개념, 쩜쩜쩜 ... 분해해서 넣어준다.
+    console.log(arr2); //[1, 2, 3, 4, 5, 6]
+
+    var arr2 = [1,2,...arr1,3]; //중간에 넣을 수도 있다.
+    console.log(arr2); //[1, 2, 4, 5, 6, 3]
+
+    var arr1 = [4,5,6]; //배열 선언
+    var arr2 = [1,2,3];
+    var arr3 = [...arr2,...arr1]; 
+    console.log(arr3); // [1, 2, 3, 4, 5, 6]
+
+    var cd = "CD";
+    var alphabet = ['A','B',...cd]; //문자 분해
+    console.log(alphabet); //['A', 'B', 'C', 'D'] 
+
+    </script>
+</body>
+</html>

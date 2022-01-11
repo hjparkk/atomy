@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //scope 는 변수에 대한 접근성을 의미합니다.
+    
+    //local scope
+    function myFunction(){
+        var carName = "Hyundai";
+        console.log(carName);
+    }
+
+    myFunction();
+    //consol.log(carName); //function 안에 선언한 것은 밖에서 호출 불가능
+
+    //global scope 
+    var carName2 = "KIA";
+    myFunction2(); // 에러나지 않음, 펑션 함수가 아무리 밑에 있어서, 펑션 함수를 읽고 실행시키기 때문에 에러나지 않음.
+    function myFunction2(){       
+        console.log(carName2); //펑션 밖에 선언은, 안에서 호출 가능.
+    }
+
+    //myFunction2();
+
+    // myFunction3(); // 호출하는 것이 위에 있으면 에러 난다. 변수에 저장 했을 때는 밑에 있어야 한다.
+    // var myFunction3 = function(){ //var 변수에, 함수를 담을 수 있다.
+    //     console.log(carName2);
+    // }
+    //myFunction3(); //변수에 저장 했을 때는 밑에 있어야 한다.
+
+    </script>
+</body>
+</html>

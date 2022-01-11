@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //스트릭트 모드 - 엄격한 모드
+    //자바스크립트 초기에, 변수를 선언해야 되는데, 선언자 없이 변수를 만들어도 허용해줬음 > 실행 가능, 에러가 안남
+    //
+
+    // x = 3.14; // 변수 선언 안해도 오류 안남 
+    // console.log(x); //3.14
+
+    // "use strict";
+    // x = 3.14;
+    // console.log(x); //Uncaught ReferenceError: x is not defined
+
+    function myFunction(){
+        "use strict"; //함수 안에서 사용 가능
+        y = 2;
+    }
+    myFunction(); //3-16.Strict Mode.html:20 Uncaught ReferenceError: y is not defined
+
+    
+    </script>
+</body>
+</html>

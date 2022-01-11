@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = 0.1 + 0.2;
+        //console.log(x); //0.3
+        //0.30000000000000004
+        //64비트 부동소수점
+
+        console.log(1/2); //유한소수
+        console.log(2/3); //무한소수
+
+        //0.1 = 1/10
+        //0.2 = 1/5
+
+        console.log((0.1).toString(2));
+        //0.0001100110011001100110011001100110011001100110011001101
+        //64비트 부동소수점
+
+        //1비트 - 양수 0, 음수 1
+        //11비트 - 지수부 - 2^(n-1)-1 + m
+        //52비트 - 가수부
+        //2^10 = 1024 -1 -4 = 1019       
+
+
+        let x2 = 999999999999999; //정수도 15자리.
+        console.log(x2)
+
+        let x22 = 9999999999999999; //정수도 15자리 이상 넘어가면 값이 변경됨
+        console.log(x22)
+        console.log(Number.MAX_SAFE_INTEGER);
+
+
+        //연산일 경우, 외부 라이브러리를 사용
+        // BigNumber.js
+        // Big.js
+        // Decimal.js
+
+    </script>
+</body>
+</html>

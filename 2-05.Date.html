@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+    <script>
+        //moment.js cdn 으로 검색
+        //오픈소스, cdn - 외부 접근 가능한 주소 제공
+
+        var d = new Date(); //현재 날짜/시간 출력
+        console.log(d); //Fri Oct 29 2021 14:16:08 GMT+0900 (한국 표준시)
+
+        //month 월인 경우는 0 부터 시작 > 1월 = 0
+        //day 일자는 1 부터 시작 > 1일 = 1 
+        //글로벌 애플리케이션을 만든다고 하면, 
+        //2021-03-21, 2021.03.21
+        //미국은 월 일 년도  > Mar 21, 2021
+        var d = new Date(2021,3,27,11,14,23);
+        console.log(d); //Tue Apr 27 2021 11:14:23 GMT+0900 (한국 표준시)
+
+        var month_en = ["Jan","Feb","Mar"];
+        
+        //3월인 경우 > 2가 아니고 3준다고 치면, 월에는 -1 해야 원하는 월을 가져올 수 있다.
+        var mon = 3;
+        console.log(month_en[mon-1]); //Mar
+
+        //3월인 경우 > 2
+        var mon = 2;
+        console.log(month_en[mon]); //Mar
+
+        var year = d.getFullYear();
+        console.log(year); //2021
+
+        var month = d.getMonth();
+        console.log("month",month); //month 3
+
+        
+        //moment().format("YYYY-MM-DD");
+        console.log(moment().format("YYYY-MM-DD")); //한국사람
+        console.log(moment().format("MMM dd, YYYY")); //미국사람
+
+        console.log(moment().subtract(7, "days").format("YYYY-MM-DD")); //subtract - 빼겠다는 의미, 7일을 뺌
+        console.log(moment().add(7, "days").format("YYYY-MM-DD")); //add - 더하겠다. 7일을 더함.
+        console.log(moment().add(4, "hours").format("YYYY-MM-DD HH")); //hours 
+
+
+    </script>
+</body>
+</html>

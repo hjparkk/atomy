@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var txt = "ABCDEFGHIJKLMN";
+        console.log(txt.length); //14, 글자길이
+
+        //indexOf
+        var str= "Please locate where 'locate'";
+        console.log(str.indexOf("locate")); //7, 시작점 리턴함.
+        console.log(str.indexOf("John")); //없으면 -1 리턴함
+
+        if(str.indexOf("John") > -1) {//문자가 있는지 없는지 체크
+            console.log("locate문자 발견");
+        }
+
+        //LastIndexOf
+        console.log(str.lastIndexOf("locate"));
+        console.log(str.search("locate")); //search = indexOf 와 같은 값 리턴
+
+        //slice
+        var str = "Apple, Banana, Kiwi";
+        console.log(str.slice(7,13)); //Banana, 가지고 오려는 문자열의 다음문자열까지 포함해야하 원하는 문자를 가져온다.
+        console.log(str.slice(7)); //Banana, Kiwi 종료지정 안하면, 끝까지 다 가져온다.
+        console.log(str.slice(-12,-6)); //Banana
+        console.log(str.slice(-12)); //Banana, Kiwi
+
+        //string
+        console.log(str.substring(7,13)); //Banana, slice = substring
+
+        var birthday = "1997-05-27"; //문자를 잘라내고 싶을 때 사용,
+        console.log(birthday.substring(0,birthday.indexOf("-"))); //1997, 몇 글자인지 모를때,
+
+        //substr
+        console.log(str.substr(7,6)); //Banana, 시작점과 문자길이 
+
+        var birthday = "970527";
+        console.log(birthday.substr(0,2)); //97, 년생
+        console.log(birthday.substr(2,2)); //05, 몇월
+
+        //replace
+        //var str = "Please visit here!";
+        //var str2 = str.replace("here","there");
+        //console.log(str); // Please visit here!
+        //console.log(str2); // Please visit there!
+
+        //var str = "Please visit here here here!";
+        //var str2 = str.replace("here","there");
+        //console.log(str2); //Please visit there here here! 첫번째 here만 바뀜
+
+        //replace 정규식
+        var str = "Please visit here here here!";
+        var str2 = str.replace(/here/g,"there");
+        console.log(str2); //Please visit there there there!, g = global 전체에서 찾아라.
+
+        var str3 = "Please visit here HERE here!";
+        var str5 = str3.replace(/here/g,"there"); //g 대소문자 구분함.
+        var str4 = str3.replace(/here/gi,"there"); //gi 대소문자 구분하지 않겠다.
+        console.log(str5);
+        console.log(str4);
+
+        //uppercase 어퍼케이스
+        console.log(str.toUpperCase()); //대문자로 다 바꿔라.
+
+        //lowercase
+        console.log(str.toLowerCase()); //소문자로 다 바꿔라.
+
+        //john
+        //JOHN
+        //데이터베이스 john, John 
+        //사용자가 소문자, 대문자 넣든 > 소문자/대문자로 다 일괄 변경하고 디비에 넣는다.
+
+        //concat 컨켓
+        var txt1 = "Hello";
+        var txt2 = "World";
+        var txt3 = txt1 + " " + txt2; //Hello World
+        console.log(txt3);
+        var txt4 = txt1.concat(" ",txt2); //Hello World, 원하는 것 다 연결해준다.
+        console.log(txt4);
+
+        //trim 트림
+        var str = "     Hello World!          ";
+        console.log(str);
+        console.log(str.trim()); //trim 공백 다 빼준다.
+        //사용자가 빈공백을 넣으면 서버까지 들어가면, 공백까지 비교해서 찾기 때문에, 우리가 원하는 값을 못찾는다.
+        
+        //padStart 패드스타트 / 많이 사용
+        var str = "5";
+        console.log(str.padStart(4,0)); //0005, 첫번째 숫자는 4글자를 만들어라, 0으로 채워서 만들어라.
+        //3일을 03을 저장하고 싶다, 왜냐면, 10일 이상이면 두자리 넘어가니깐,
+        var str2 = "15";
+        console.log(str2.padStart(2,0)); //15 이미 두자리라, 0을 안쓴다.
+
+        //padEnd
+        console.log(str2.padEnd(4,0)); //1500, 뒤를 0으로 채워라. 실무에서 거의 안씀.
+
+        //charAt 캐리터앳
+        var str = "Hello World";
+        console.log(str.charAt(0)); //H, 문자열에서 내가 원하는 위치에 있는 특정 캐리터를 가지고 올 때 사용.
+
+        //split 스프릿 / 많이 사용
+        var tags = "키보드, 기계식, 플루투스"; //화면 UI에서는 각각 키워드로 분리해서 보여주고 싶을 때
+        var arr = tags.split(","); 
+        console.log(arr); //['키보드', ' 기계식', ' 플루투스'] 배열로 저장됨
+        //0: "키보드"
+        //1: " 기계식"
+        //2: " 플루투스"
+
+        var birthday = "1997-06-12";
+        var arr2 = birthday.split("-");
+        console.log(arr2); //['1997', '06', '12'] 배열로 저장됨
+    </script>
+</body>
+</html>

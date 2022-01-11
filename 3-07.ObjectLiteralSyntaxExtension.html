@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //오브젝트 리터럴 신텍스 익스텐션
+    //오브젝트 키와 벨류 내임이 같아도 다른 것이다. firstName
+    //오브젝트 키를 [] 동적으로 잡을 수 있게 해준다.
+
+    var firstName = "John";
+    var lastName = "Doe";
+
+    var person = {
+        firstName: firstName,
+        lastName: lastName
+    };
+
+    var type = "student";
+    var score = {
+        [type]: "John", //[] 동적 키
+        score: 95
+    };
+    console.log(score.student); //John
+
+    //기존 가능했던 문법
+    //score.grade = 1;
+    console.log(score); //score 오브젝트 출력 > {student: 'John', score: 95, grade: 1}
+
+    var type2 = "grade";
+    score[type2] =1; //[] 대괄호를 변수로 사용 가능
+    console.log(score);
+
+    </script>
+</body>
+</html>

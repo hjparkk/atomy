@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //애로우 펑션
+    function hello(){
+        console.log("Hello World");
+        return "Hello World";
+    }
+
+    var hello = function(){
+        console.log("Hello World");
+        return "Hello World";
+    }
+
+    var hello = () => "Hello World";
+
+    var hello = (fullName) => "Hello " + fullName;
+    console.log(hello("John Doe"));
+
+    var hello = fullName => "Hello " + fullName; //파라미터가 1개이면 () 중괄호도 생략 가능.
+    console.log(hello("John Doe"));
+
+    var hello = (fullName, lastName) => "Hello " + fullName + " " + lastName;
+    console.log(hello("John", "Doe"));
+
+    // var hello = () => {
+    //     console.log("Hello World");
+    //     return "Hello World";
+    // }
+
+    </script>
+</body>
+</html>

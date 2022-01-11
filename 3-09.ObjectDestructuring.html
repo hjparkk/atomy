@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //오브젝트 디스트럭처링
+    //자주 이용하는 기능
+    //오브젝트는 {} 중괄호 사용
+    //var {} 선언
+    function getPerson(){
+        return{
+            firstName: "John",
+            lastName: "Doe",
+            age: "37",
+            email: "john@gmail.com",
+            city: "New York",
+            country: "USA"
+        };
+    }
+
+    //이전 사용
+    var person = getPerson(); //전체를 다 받아와야 했다.
+    console.log(person); //{firstName: 'John', lastName: 'Doe', age: '37', email: 'john@gmail.com', city: 'New York', …}
+    console.log(person.firstName); 
+    console.log(person.lastName); 
+
+    //오브젝트 디스트럭처링
+    var {firstName,lastName} = getPerson(); //굉장히 많이 사용하는 기능. 
+    console.log(firstName);
+    console.log(lastName);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // try/catch/finally
+    // 예기치 못한 에러. 트라이 캐치문 해 놓으면, 그것때문에 실행이 안되거나 하는 상황을 없앨 수 있다.
+    // 강제로 에러를 출력 시킬 수도 있다. throw 쓰로우를 사용.
+    // finally
+
+    // try{
+    //     console.log("log메시지");
+    // } catch(err){
+
+    // }
+
+    try{
+        consol.log("log메시지");
+    } catch(err){
+        console.log(err.name); // ReferenceError
+        console.log(err.message); // consol is not defined
+    }
+    console.log("log 정상 메시지"); // log 정상 메시지
+
+    //var x = "";
+    var x = 5;
+    try{
+        if(x == "") throw "empty"; //x가 0일때 에러.
+        var y = x + 3;
+        console.log(y); //8
+    } catch(err) {
+        console.log(`x is ${err}`); //x is empty 강제로 에러를 출력
+    } finally {
+        console.log("try/catch문 제일 마지막에 반드시 실행"); //try/catch문 제일 마지막에 반드시 실행. 에러와 상관 없이 실행.
+    }
+
+
+    </script>
+</body>
+</html>

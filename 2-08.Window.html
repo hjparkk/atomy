@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //console.log(window);
+
+        //alert("이것은 alert 창 입니다.");
+        // var yn = confirm("정말 삭제?");
+        // console.log(yn); // true, false
+
+        // if(confirm("정말 삭제?")){
+        //     //삭제 실행
+        //     console.log("삭제 실행");
+        // }
+
+        //prompt("비밀번호를 입력하세요"); //프롬프트
+        // var txt = prompt("비밀번호를 입력하세요"); 
+        // console.log(txt); //취소-null
+
+        //window.open("https://naver.com");
+        //window.print();
+
+        //setTimeout() - 1초 = 1000
+        // setTimeout(function(){
+        //     console.log("5초후 프로그램 실행");
+        // }, 5000);
+        
+        //setInterval() - 시간마다 실행 > 사용자가 1000명이면 서버 부하가 많이 됨.
+        var i = 0;
+        var fnc = setInterval(function(){
+            console.log("3초마다 프로그램 실행 - " + i);
+            if(i == 3){
+                clearInterval(fnc);
+            }
+            i++
+        }, 3000);
+
+        //clearInterval
+
+        //웹소켓 > 서버에서 값이 바꼈는지 확인하고, 바뀌지 않았으면 클라이언트에 내보내지 않고, 바뀌었을 때 내보낸다. 
+
+    </script>
+</body>
+</html>

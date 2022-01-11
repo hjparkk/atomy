@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Number
+        var x = 123;
+        //toString(); 숫자를 문자로 변환.
+        console.log(x.toString()); //123
+
+        //toFixed()
+        //지정된 소수점 자리수까지 반올림으로 표기
+        var x = 9.56;
+        console.log(x.toFixed());//10
+        var xx = 123999.567243;
+        console.log(xx.toFixed(2));//123999.57 소수점 이하 자릿수 의미
+
+        //toPrecision
+        var x = 9.545; 
+        console.log(x.toPrecision(2)); //9.5 정수까지 포함한 자릿수 의미
+
+        var x = Number("10"); //숫자 10으로 바뀐다.
+        var x = Number(true); //1
+        var x = Number(false); //0
+        console.log(x);
+        console.log(Number("   10          ")); //10 공백 상관없이 숫자 10을 리턴한다.
+        console.log(Number("   10.33         ")); //10.33
+        console.log(Number("   10,33         ")); //NaN - Not a Number
+        console.log(Number("John")); //NaN
+        console.log(Number("10 33")); //NaN
+        //NaN - Not a Number
+
+        //parseInt() 파스인트 정수형으로만 리턴한다.
+        console.log(parseInt("3")); //3
+        console.log(parseInt("3.14")); //3 무조건 소수점 이하는 버리고 정수만 리턴.
+        console.log(parseInt("10 20 30")); // 10 앞에 있는 것만 읽는다. 
+        console.log(parseInt("12 years")); //12 
+        console.log(parseInt("years 12")); //NaN
+
+        //parseFloat() 파스플롯트 소수점까지 다 쓴다.
+        console.log(parseFloat("10")); //10
+        console.log(parseFloat("13.9")); //13.9
+        console.log(parseFloat("13.9 aa")); //13.9
+        
+
+    </script>
+</body>
+</html>
