@@ -4,16 +4,75 @@
     <title>Document</title>
 </head>
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
     //Promise
-    //비동기 통신
-    //실행될 때까지, 기다려 줄게. 
-    //서버에서 불러오는 시점을 기다려야 프라미스 활용할 수 있다.
-    //가짜 서버를 만들어 사용해 볼 수 있다.
-    //유투브 > 개발자의품격 > 까자(Mock) 서버 만들어서 API 활용하기
+    //비동기 통신 - 
+    //클라이언트 웹브라우져에서 서버에서 부터 데이터를 요청하고, 서버로부터 데이터를 받아오는, 펑션을 개발해서 넣을 수 있다.
+    //일반적으로 자바스크립트는, 위에 것이 끝나고 밑에 것을 실행한다. 순차적 실행.
+    //중간에 서버 호출해서 데이터를 받아오는 함수를 구현했다면, 서버로 뭔가를 요청을 하는데,
+    //서버단에서 어떤 프로그램이 동작하는지 웹브라우져단에서는 모른다. 에러가 났는지 어떤지 모름. 
+    //서버에서 돌아가는 것은 서버에서 돌아가기에 클라이언트는 모른다.
+    //서버 호출해서 데이터 받아와! 했는데, 받아오는 동안에 그 밑에 스크립트가 실행될 수 있다.
+    //받아올 때까지 기다려 주지 않는다.
 
-    //엑시오엑스 axios
-    //CDN 주소 가져온다.
+    //var x = 1;
+
+    //서버 호출해서 데이터를 받아오는 함수.
+    //y = callServerData();
+
+    //var z = x + 2;
+    //var z = x + y; //서버 데이터가 실행되기전에, 실행이 되버려서, y에 아무런 값이 없어서, 에러가 떨어진다.
+    
+    //서버 실행될 때까지, 밑에꺼 실행 안하고, 기다려 줄게. 
+    //서버에서 불러오는 시점을 기다려야 프라미스 활용할 수 있다.
+    //가짜 서버를 만들어 사용해 볼 수 있다. > postman
+    //유투브 > 개발자의품격 > 가짜 (Mock) 서버 만들어서 API 활용하기
+
+    //엑시오엑스 axios > https://github.com/axios/axios
+    //Using jsDelivr CDN 주소 가져온다. 
+    //Example
+    
+    
+    //postman Mook server 만들고 호출
+    //var url = "https://72878ffa-a704-4fed-9d56-4c28558208f7.mock.pstmn.io/productList";
+    var url = "https://72878ffa-a704-4fed-9d56-4c28558208f7.mock.pstmn.io/userList";
+
+    // var data = axios.get(url).then(function(response){
+    //     console.log(response.data);
+    //     return response.data;
+    // })    
+
+    function getData(){
+        //promise
+
+        return new Promise(function(resolve, reject){
+                axios.get(url).then(function(response){
+                console.log(response.data);            
+                resolve(response.data); //return response.data;
+            });    
+        });
+    }
+
+    var total = 0;
+
+    getData().then(function(data){
+        for(var item of data.userList){ //data.products //data.userList
+            //total += item.price;
+            console.log(item.name); //Jeremy //John
+        } 
+
+        //console.log(total); //69000
+    });
+
+    
+    // for(var item of data){
+    //     total += item.price;
+    // } //비동기 통신 - 서버로부터 데이터를 받아서 실행. 기다리지 않고 함수 실행해서 에러가 남.
+
+    // console.log(total);
+
+    //9:55
 
     </script>
 </body>
